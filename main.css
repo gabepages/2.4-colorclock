@@ -1,0 +1,51 @@
+body {
+background-color: #000000;
+}
+
+.clock{
+  margin: 300px auto;
+  text-align: center;
+}
+
+
+.elapsed-time {
+  font-size: 60px;
+  color: white;
+  font-family:  monospace;
+}
+
+.hours::after,
+.minutes::after {
+  content: ":"
+}
+
+#bar {
+  text-align: center;
+  height: 0px;
+  max-width: 100%;
+  width: 0%;
+  margin: -20px auto;
+  border: 1px solid white;
+}
+
+.hours-hex,
+.minutes-hex,
+.seconds-hex {
+  display: none;
+}
+
+.elapsed-time:hover .hours-hex,
+.elapsed-time:hover .minutes-hex,
+.elapsed-time:hover .seconds-hex{
+  display: inline;
+}
+.elapsed-time:hover .hours-hex::before{
+  content: "#";
+}
+
+
+.elapsed-time:hover .hours,
+.elapsed-time:hover .minutes,
+.elapsed-time:hover .seconds{
+  display: none;
+}
